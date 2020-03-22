@@ -3,6 +3,7 @@ import os
 import csv
 from tabulate import tabulate
 from io import StringIO
+import tempfile
 
 def convert(file):
     data = str(file.read())
@@ -31,8 +32,7 @@ def convert(file):
         real_z_list.append(row[real_z_index])
         imaginary_z_list.append(row[imaginary_z_index])
 
-    print('CURRENT DIR: ' + os.path.curdir)
-    new_file_full_path = os.path.join(os.path.curdir, 'conversors', 'converted', 'converted.txt')
+    new_file_full_path = os.path.join(tempfile.gettempdir(), 'converted.txt')
 
     f = open(new_file_full_path, "w")
 
