@@ -1,5 +1,5 @@
 from flask import Flask, request, send_file, render_template
-import conversors.nova_to_eis_analyzer as nova_to_eis_analyzer
+import conversors.nova_to_eis_analyser as nova_to_eis_analyser
 import os
 
 app = Flask(__name__)
@@ -11,7 +11,7 @@ print(file_path)
 def convert_file():
     file = request.files.get('file')
     try:
-        nova_to_eis_analyzer.convert(file)
+        nova_to_eis_analyser.convert(file)
         return send_file(file_path, attachment_filename='converted.txt')
     except Exception as e:
         return str(e)
