@@ -7,7 +7,20 @@ $("#btn-submit").click(function (event) {
     event.preventDefault()
 
     var form_data = new FormData()
-    form_data.append('file', $('#file-input')[0].files[0])
+    var file = $('#file-input')[0].files[0]
+    var fileInput = $('.custom-file-input')
+    
+    if (!file) {
+        fileInput.addClass('is-invalid')
+        return false
+    }
+
+    if (!isValidExtension(file.name)) {
+        fileInput.addClass('is-invalid')
+        return false
+    }
+
+    form_data.append('file', file)
 
     $("#btnSubmit").prop("disabled", true);
 
@@ -30,6 +43,7 @@ $("#btn-submit").click(function (event) {
             a.click()
             window.URL.revokeObjectURL(url)
             $("#btn-submit").prop("disabled", false);
+            fileInput.removeClass('is-invalid')
         },
         error: function(error) {
             alert(error)
@@ -37,3 +51,18 @@ $("#btn-submit").click(function (event) {
         }
     })
 })
+
+function getExtension(filename) {
+    var parts = filename.split('.');
+    return parts[parts.length - 1];
+}
+
+function isValidExtension(filename) {
+    var extension = getExtension(filename)
+    switch (extension.toLowerCase()) {
+        case 'txt':
+        case 'csv':
+            return true
+    }
+    return false
+}

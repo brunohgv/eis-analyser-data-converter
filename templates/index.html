@@ -10,13 +10,13 @@
     </head>
     <body>
         <div class="container" style="max-width: 500px">
-            <h1>Nova to EIS Analyser Conversor</h1>
+            <h1 class="mb-3">Nova to EIS Analyser Conversor</h1>
             <form id="file-upload-form" method="POST" enctype="multipart/form-data">
-                <div class="row mb-2">
+                <div class="row mb-4">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="file-input" name="file" required>
-                        <label class="custom-file-label" for="validatedCustomFile">Select a Nova File</label>
-                        <div class="invalid-feedback">Invalid custom file feedback</div>
+                        <label class="custom-file-label" for="file-input">Select a Nova File</label>
+                        <div class="invalid-feedback">Invalid or no file was selected</div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
