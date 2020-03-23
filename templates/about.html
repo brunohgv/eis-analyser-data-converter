@@ -11,17 +11,17 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-            <a class="navbar-brand" href="#">Nova to EIS Analyser</a>
+            <a class="navbar-brand" href="/">Nova to EIS Analyser</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Conversor<span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="/">Conversor</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -40,26 +40,28 @@
         </nav>
 
         <div class="container" style="max-width: 500px">
-            <h2 class="mb-3">Nova to EIS Analyser Conversor</h2>
-            <form id="file-upload-form" method="POST" enctype="multipart/form-data">
-                <div class="row mb-4">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="file-input" name="file" required>
-                        <label class="custom-file-label" for="file-input">Select a Nova File</label>
-                        <div class="invalid-feedback">Invalid or no file was selected</div>
-                    </div>
+            <h3>About</h3>
+            <p>This is a simple web service that converts Autolab Nova output files to EIS Spectrum Analyser input files, making easy to port data between these two softwares.</p>
+            <h3>The author</h3>
+            <p>
+                Hi, I'm Bruno Vasconcelos, a software developer looking for problems to solve. I hope you enjoy this application and if you have any suggestion send an email to <a href="brunohgv2@gmail.com">brunohgv2@gmail.com</a>. I'll be pleasured to help.
+            </p>
+            <div class="row">
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/bruno-vasconcelos-7a1a8113b/" class="nav-link" target="_blank">
+                        <i class="fab fa-lg fa-linkedin"></i> My Linkedin
+                    </a>
                 </div>
-                <div class="row justify-content-center">
-                    <button type="submit" id="btn-submit" class="btn btn-secondary btn-block">Convert</button>
+                <div class="col">
+                    <a href="https://github.com/brunohgv/" class="nav-link" target="_blank">
+                        <i class="fab fa-lg fa-github"></i> My Github
+                    </a>
                 </div>
-            </form>
+            </div>
         </div>
 
-        
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </body>
 </html>
