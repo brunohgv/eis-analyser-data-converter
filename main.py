@@ -24,5 +24,9 @@ def convert_page():
 def about_page():
     return render_template('about.html')
 
+@app.route('/thankyou')
+def thak_you_page():
+    return render_template('thankyou.html')
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)

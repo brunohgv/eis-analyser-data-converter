@@ -1,9 +1,9 @@
 $('#file-input').on('change',function(){
-    var fileName = $(this).val();
-    $(this).next('.custom-file-label').html(fileName);
+    var fileName = $(this).val()
+    $(this).next('.custom-file-label').html(fileName)
 })
 
-$("#btn-submit").click(function (event) {
+$('#btn-submit').click(function (event) {
     event.preventDefault()
 
     var form_data = new FormData()
@@ -22,11 +22,11 @@ $("#btn-submit").click(function (event) {
 
     form_data.append('file', file)
 
-    $("#btnSubmit").prop("disabled", true);
+    $('#btnSubmit').prop('disabled', true)
 
     $.ajax({
         type: 'POST',
-        mimeType: "multipart/form-data",
+        mimeType: 'multipart/form-data',
         data: form_data,
         url: '/convert',
         processData: false,
@@ -42,19 +42,23 @@ $("#btn-submit").click(function (event) {
             document.body.appendChild(a)
             a.click()
             window.URL.revokeObjectURL(url)
-            $("#btn-submit").prop("disabled", false);
+            $('#btn-submit').prop('disabled', false)
             fileInput.removeClass('is-invalid')
+
+            // Redirect to thank you page
+            console.log(window.location.href)
+            window.location.href = '/thankyou'
         },
         error: function(error) {
             alert(error)
-            $("#btn-submit").prop("disabled", false);
+            $('#btn-submit').prop('disabled', false)
         }
     })
 })
 
 function getExtension(filename) {
-    var parts = filename.split('.');
-    return parts[parts.length - 1];
+    var parts = filename.split('.')
+    return parts[parts.length - 1]
 }
 
 function isValidExtension(filename) {
