@@ -20,8 +20,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Converter</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -40,28 +40,26 @@
         </nav>
 
         <div class="container" style="max-width: 500px">
-            <h3>About</h3>
-            <p>This is a simple web service that converts <a href="https://metrohm-autolab.com/Products/Echem/Software/Nova.html" target="_blank" rel="noopener noreferrer">Autolab Nova</a> output files to <a href="http://www.abc.chemistry.bsu.by/vi/analyser/" target="_blank" rel="noopener noreferrer">EIS Spectrum Analyser</a> input files, making easy to port data between these two softwares.</p>
-            <h3>The author</h3>
+            <h2 class="mb-3">Thank you for the download</h2>
             <p>
-                Hi, I'm Bruno Vasconcelos, a software developer looking for problems to solve. I hope you enjoy this application and if you have any suggestion send an email to <a href="brunohgv2@gmail.com">brunohgv2@gmail.com</a>. I'll be pleasured to help.
+                We are really happy to contribute to your work.
+                For any issues or improvements you can send an email to <a href="mailto:brunohgv2@gmail.com">brunohgv2@gmail.com</a>
+                or open an issue in our <a href="https://github.com/brunohgv/eis-analyser-data-converter" target="_blank" rel="noopener noreferrer">Github</a>.
             </p>
-            <div class="row">
-                <div class="col">
-                    <a href="https://www.linkedin.com/in/bruno-vasconcelos-7a1a8113b/" class="nav-link" target="_blank">
-                        <i class="fab fa-lg fa-linkedin"></i> My Linkedin
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="https://github.com/brunohgv/" class="nav-link" target="_blank">
-                        <i class="fab fa-lg fa-github"></i> My Github
-                    </a>
-                </div>
-            </div>
+            <h3>Privacy</h3>
+            <p>
+                We care about your privacy, so we don't store any data processed in the tool. To ensure this commitment all our source code is open and available in our <a href="https://github.com/brunohgv/nova-to-eis-analyser" target="_blank" rel="noopener noreferrer">Github repository</a>.
+                It means you can check all the implementation and verify what we do.
+            </p>
+
+            <a href="/" class="btn btn-secondary btn-block">Return to Home page</a>
         </div>
 
+        
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </body>
 </html>
