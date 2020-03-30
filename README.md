@@ -1,4 +1,4 @@
-# Nova to EIS Analyser :star::star::star::star::star:
+# EIS Analyser Data Converter :star::star::star::star::star:
 
 ## About :eyes:
 
