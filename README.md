@@ -6,7 +6,7 @@ This is a simple web service that converts [Autolab Nova](https://metrohm-autola
 
 ## How to use :book:
 
-Access the web page: https://nova-to-eis-analyser.appspot.com/
+Access the web page: http://eisanalyserdataconverter.tk
 
 - Click in the input field
 - Select the *Autolab Nova* output file. The accepted formats are `.txt` and `.csv`.
