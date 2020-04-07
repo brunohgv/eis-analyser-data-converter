@@ -28,5 +28,9 @@ def about_page():
 def thak_you_page():
     return render_template('thankyou.html')
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
